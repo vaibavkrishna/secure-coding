@@ -1,0 +1,299 @@
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/http.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/http.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/hash.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/hash.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/conf_ext.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/conf_ext.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/daemon.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/daemon.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/conf.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/conf.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/www_ext.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/www_ext.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/daemon.c ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/daemon.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/ghostd.c ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/ghostd.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/www.c ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/www.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/http.c ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/http.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/ghostd.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/ghostd.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/conf.c ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/conf.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/httpd_ext.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/httpd_ext.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/http_ext.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/http_ext.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/log.c ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/log.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/log.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/log.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/www.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/www.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/ghost/ghost-0.1/src/proxy_ext.h ...
+Running cppcheck on: /home/wallsocket/tty64/ghost/ghost-0.1/src/proxy_ext.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/krembo/krembo-0.1/krembo.c ...
+Running cppcheck on: /home/wallsocket/tty64/krembo/krembo-0.1/krembo.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/utilities.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/utilities.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/io.c ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/io.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/gfx.c ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/gfx.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/io.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/io.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/gfx.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/gfx.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/process.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/process.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/consts.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/consts.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/procfs.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/procfs.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/hexdump.c ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/hexdump.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/opts.c ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/opts.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/io_ext.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/io_ext.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/sinister.c ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/sinister.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/sinister.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/sinister.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/utilities.c ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/utilities.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/process.c ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/process.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/procfs_read.c ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/procfs_read.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/hexdump.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/hexdump.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/hex_ext.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/hex_ext.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/process_ext.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/process_ext.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/sinister/sinister-0.1/src/opts_ext.h ...
+Running cppcheck on: /home/wallsocket/tty64/sinister/sinister-0.1/src/opts_ext.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/hydrogen/hydrogen-0.1/src/hydrogen.c ...
+Checking /home/wallsocket/tty64/hydrogen/hydrogen-0.1/src/hydrogen.c: __alpha__...
+Checking /home/wallsocket/tty64/hydrogen/hydrogen-0.1/src/hydrogen.c: __arch_um__;__arm__;__i386__;__mc68000__...
+Checking /home/wallsocket/tty64/hydrogen/hydrogen-0.1/src/hydrogen.c: __sparc__...
+Running cppcheck on: /home/wallsocket/tty64/hydrogen/hydrogen-0.1/src/hydrogen.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/preprocs.c ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/preprocs.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/x86.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/x86.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shells.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shells.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.c ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.c ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gfx.c ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gfx.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmo.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmo.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/crypt.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/crypt.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gfx.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gfx.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shbuf.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shbuf.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmos.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmos.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shbuf.c ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shbuf.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/asm.c ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/asm.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/asm.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/asm.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/crypt.c ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/crypt.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shells.c ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shells.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmo.c ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmo.c
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/preprocs.h ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/preprocs.h
+
+--------------------------------------------------
+Checking /home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c ...
+Running cppcheck on: /home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c
+
+--------------------------------------------------

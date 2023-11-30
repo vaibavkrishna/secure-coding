@@ -1,0 +1,1132 @@
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102553-12533-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102554-12540-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:102:6: warning: Value stored to 'num' is never read [deadcode.DeadStores]
+                                        num = write(sfd, c_mod_hdr, strlen(c_mod_hdr));
+                                        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:123:6: warning: Value stored to 'num' is never read [deadcode.DeadStores]
+                                        num = write(cfd, s_mod_hdr, strlen(s_mod_hdr));
+                                        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:269:9: warning: Value stored to 'retval' is never read [deadcode.DeadStores]
+        retval = connect(fd, (struct sockaddr*)&sin, sizeof(sin));
+        ^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:102:6: warning: Value stored to 'num' is never read [deadcode.DeadStores]
+                                        num = write(sfd, c_mod_hdr, strlen(c_mod_hdr));
+                                        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:123:6: warning: Value stored to 'num' is never read [deadcode.DeadStores]
+                                        num = write(cfd, s_mod_hdr, strlen(s_mod_hdr));
+                                        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:269:9: warning: Value stored to 'retval' is never read [deadcode.DeadStores]
+        retval = connect(fd, (struct sockaddr*)&sin, sizeof(sin));
+        ^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+scan-build: Analysis run complete.
+scan-build: 3 bugs found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-102554-12547-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102556-12557-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102556-12564-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102556-12571-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.h:10:1: error: unknown type name 'hashtable'
+hashtable *cfg_parse(char *);
+^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.h:13:22: error: unknown type name 'hashtable'
+int cfg_validate_all(hashtable *, int mode);
+                     ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.h:19:29: error: unknown type name 'hashtable'
+void build_cfg_bitmask_opts(hashtable *);
+                            ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.h:21:17: error: unknown type name 'FILE'
+int config_dump(FILE *);
+                ^
+4 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102556-12578-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.h:15:16: error: unknown type name 'FILE'
+int proxy_dump(FILE *);
+               ^
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102556-12585-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102556-12592-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102557-12599-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102557-12609-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1112:3: warning: Value stored to 'rval' is never read [deadcode.DeadStores]
+                rval = proxy_add(proxy_addr, proxy_port);
+                ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1116:3: warning: Value stored to 'rval' is never read [deadcode.DeadStores]
+                rval = proxy_mod(proxy_idx, proxy_addr, proxy_port);
+                ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1112:3: warning: Value stored to 'rval' is never read [deadcode.DeadStores]
+                rval = proxy_add(proxy_addr, proxy_port);
+                ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1116:3: warning: Value stored to 'rval' is never read [deadcode.DeadStores]
+                rval = proxy_mod(proxy_idx, proxy_addr, proxy_port);
+                ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+scan-build: Analysis run complete.
+scan-build: 2 bugs found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-102557-12619-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:34:4: error: use of undeclared identifier 'NULL'
+        { NULL           , NULL            }
+          ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:34:17: error: use of undeclared identifier 'NULL'
+        { NULL           , NULL            }
+                           ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:39:4: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL            }
+          ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:39:19: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL            }
+                            ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:47:4: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL                   }
+          ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:47:21: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL                   }
+                            ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:53:4: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL                  }     
+          ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:53:14: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL                  }     
+                            ^
+8 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102559-12629-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102559-12636-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:98:2: warning: Potential leak of memory pointed to by 'orig_hdr' [unix.Malloc]
+        strcat(mod_hdr, field);
+        ^~~~~~
+1 warning generated.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:98:2: warning: Potential leak of memory pointed to by 'orig_hdr' [unix.Malloc]
+        strcat(mod_hdr, field);
+        ^~~~~~
+1 warning generated.
+scan-build: Analysis run complete.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-102559-12646-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102600-12656-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102600-12663-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102601-12673-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102601-12680-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102601-12687-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102601-12697-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102602-12704-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:121:20: warning: Potential leak of memory pointed to by 'cur_proxy.addr' [unix.Malloc]
+                cur_proxy.port = atoi(proxy_port);
+                                 ^~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:366:7: warning: Use of memory after it is freed [unix.Malloc]
+                if (proxies.db[idx]->state == UNKNOWN) {
+                    ^~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:815:6: warning: Although the value stored to 'cur_threads' is used in the enclosing expression, the value is never actually read from 'cur_threads' [deadcode.DeadStores]
+        i = cur_threads = 0;
+            ^             ~
+3 warnings generated.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:121:20: warning: Potential leak of memory pointed to by 'cur_proxy.addr' [unix.Malloc]
+                cur_proxy.port = atoi(proxy_port);
+                                 ^~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:366:7: warning: Use of memory after it is freed [unix.Malloc]
+                if (proxies.db[idx]->state == UNKNOWN) {
+                    ^~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:815:6: warning: Although the value stored to 'cur_threads' is used in the enclosing expression, the value is never actually read from 'cur_threads' [deadcode.DeadStores]
+        i = cur_threads = 0;
+            ^             ~
+3 warnings generated.
+scan-build: Analysis run complete.
+scan-build: 3 bugs found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-102602-12711-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102606-12721-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:39:10: warning: Potential leak of memory pointed to by 'tmp' [unix.Malloc]
+                return NULL;
+                       ^~~~
+/usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h:89:24: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+                       ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:79:15: warning: Passed-by-value struct argument contains uninitialized data (e.g., field: 'data') [core.CallAndMessage]
+        if (!hash || hsearch_r(e, FIND, &ep, hash) < 1) {
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:139:6: warning: Branch condition evaluates to a garbage value [core.uninitialized.Branch]
+        if (ep) { 
+            ^~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:165:15: warning: Passed-by-value struct argument contains uninitialized data (e.g., field: 'data') [core.CallAndMessage]
+        if (!hash || hsearch_r(e, FIND, &ep, hash) < 1) {
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4 warnings generated.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:39:10: warning: Potential leak of memory pointed to by 'tmp' [unix.Malloc]
+                return NULL;
+                       ^~~~
+/usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h:89:24: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+                       ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:79:15: warning: Passed-by-value struct argument contains uninitialized data (e.g., field: 'data') [core.CallAndMessage]
+        if (!hash || hsearch_r(e, FIND, &ep, hash) < 1) {
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:139:6: warning: Branch condition evaluates to a garbage value [core.uninitialized.Branch]
+        if (ep) { 
+            ^~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:165:15: warning: Passed-by-value struct argument contains uninitialized data (e.g., field: 'data') [core.CallAndMessage]
+        if (!hash || hsearch_r(e, FIND, &ep, hash) < 1) {
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4 warnings generated.
+scan-build: Analysis run complete.
+scan-build: 4 bugs found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-102606-12728-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102606-12738-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/krembo/krembo-0.1/krembo.c:6:10: fatal error: 'ntddk.h' file not found
+#include <ntddk.h>
+         ^~~~~~~~~
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102607-12745-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h:5:1: error: unknown type name 'opts'
+opts *opts_alloc_default(void);
+^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h:10:16: error: unknown type name 'opts'
+void opts_free(opts *);
+               ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h:12:24: error: unknown type name 'opts'
+int opts_has_direction(opts *);
+                       ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h:13:21: error: unknown type name 'opts'
+int opts_has_action(opts *);
+                    ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h:14:24: error: unknown type name 'opts'
+int opts_has_cmdparams(opts *);
+                       ^
+5 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102607-12752-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102607-12759-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102607-12766-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102607-12780-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102608-12794-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102608-12801-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:5:1: error: unknown type name 'process'
+process *process_attach(int);
+^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:6:1: error: unknown type name 'process'
+process *process_create(char *, char **, char **);
+^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:8:1: error: unknown type name 'process'
+process *process_getcur(void);
+^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:9:21: error: unknown type name 'process'
+void process_setcur(process *);
+                    ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:14:19: error: unknown type name 'process'
+int process_start(process *, opts *);
+                  ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:14:30: error: unknown type name 'opts'
+int process_start(process *, opts *);
+                             ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:15:22: error: unknown type name 'process'
+void process_destory(process *);
+                     ^
+7 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102608-12808-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102608-12815-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102608-12831-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102609-12840-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102609-12852-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102609-12862-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102609-12869-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102614-12885-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102614-12892-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.c:15:10: fatal error: 'linux/user.h' file not found
+#include <linux/user.h>
+         ^~~~~~~~~~~~~~
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102614-12902-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102614-12909-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102615-12919-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102615-12926-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process_ext.h:14:2: error: unknown type name 'pid_t'
+        pid_t pid;
+        ^
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102615-12933-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102615-12940-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/hydrogen/hydrogen-0.1/src/hydrogen.c:12:10: fatal error: 'linux/mm.h' file not found
+#include <linux/mm.h>
+         ^~~~~~~~~~~~
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102615-12947-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102617-12954-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102618-12964-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/shells.h:14:2: error: unknown type name 'shbuf'
+        shbuf *(*gizmo_preproc) (void *, void *);
+        ^
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102618-12971-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102618-12978-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.h:5:41: error: unknown type name 'gizmo_shcode'
+int gizmo_elf_processor(char *, char *, gizmo_shcode *);
+                                        ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.h:6:1: error: unknown type name 'Elf32_Shdr'
+Elf32_Shdr *gizmo_elf_getsctbyname(gizmo_elf *, char *);
+^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.h:6:36: error: unknown type name 'gizmo_elf'
+Elf32_Shdr *gizmo_elf_getsctbyname(gizmo_elf *, char *);
+                                   ^
+3 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102618-12988-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102618-12996-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102620-13015-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102621-13025-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.h:5:19: error: unknown type name 'FILE'
+void *io_getchunk(FILE *, long, int);
+                  ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.h:6:17: error: unknown type name 'FILE'
+int io_chunkcpy(FILE *, FILE *, long, int, int);
+                ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.h:6:25: error: unknown type name 'FILE'
+int io_chunkcpy(FILE *, FILE *, long, int, int);
+                        ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.h:7:17: error: unknown type name 'FILE'
+int io_filesize(FILE *);
+                ^
+4 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102621-13033-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102621-13040-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102622-13049-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c:72:12: warning: Although the value stored to 'r_bytes' is used in the enclosing expression, the value is never actually read from 'r_bytes' [deadcode.DeadStores]
+        w_bytes = r_bytes = 0;
+                  ^         ~
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c:90:2: warning: Potential leak of memory pointed to by 'buf' [unix.Malloc]
+        close(fd);
+        ^~~~~
+2 warnings generated.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c:72:12: warning: Although the value stored to 'r_bytes' is used in the enclosing expression, the value is never actually read from 'r_bytes' [deadcode.DeadStores]
+        w_bytes = r_bytes = 0;
+                  ^         ~
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c:90:2: warning: Potential leak of memory pointed to by 'buf' [unix.Malloc]
+        close(fd);
+        ^~~~~
+2 warnings generated.
+scan-build: Analysis run complete.
+scan-build: 2 bugs found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-102622-13061-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102622-13081-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102622-13089-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102623-13097-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102623-13107-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102623-13127-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102623-13140-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102624-13152-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102624-13171-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102624-13178-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h:17:3: error: unknown type name 'FILE'
+                FILE *fp;
+                ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h:22:3: error: unknown type name 'Elf32_Ehdr'
+                Elf32_Ehdr *ehdr;
+                ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h:23:3: error: unknown type name 'Elf32_Phdr'
+                Elf32_Phdr *phdr;
+                ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h:24:3: error: unknown type name 'Elf32_Shdr'
+                Elf32_Shdr *shdr;
+                ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h:35:2: error: unknown type name 'gizmo_shcode'
+        gizmo_shcode *shcode;
+        ^
+5 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102624-13191-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmo.c:57:5: warning: Potential leak of memory pointed to by 'gizmo_type' [unix.Malloc]
+                                about();
+                                ^~~~~
+1 warning generated.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmo.c:57:5: warning: Potential leak of memory pointed to by 'gizmo_type' [unix.Malloc]
+                                about();
+                                ^~~~~
+1 warning generated.
+scan-build: Analysis run complete.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-102624-13202-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/preprocs.h:14:1: error: unknown type name 'shbuf'
+shbuf *gizmo_preproc_simple(void *, void *);
+^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/preprocs.h:25:1: error: unknown type name 'shbuf'
+shbuf *gizmo_preproc_crypttxt(void *, void *);
+^
+2 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-102625-13219-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c:139:7: warning: Access to field 'fp' results in a dereference of a null pointer (loaded from field 'raw') [core.NullDereference]
+                if (image->raw->fp) {
+                    ^~~~~~~~~~~~~~
+1 warning generated.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c:139:7: warning: Access to field 'fp' results in a dereference of a null pointer (loaded from field 'raw') [core.NullDereference]
+                if (image->raw->fp) {
+                    ^~~~~~~~~~~~~~
+1 warning generated.
+scan-build: Analysis run complete.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-102625-13234-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103103-13392-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103103-13399-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:102:6: warning: Value stored to 'num' is never read [deadcode.DeadStores]
+                                        num = write(sfd, c_mod_hdr, strlen(c_mod_hdr));
+                                        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:123:6: warning: Value stored to 'num' is never read [deadcode.DeadStores]
+                                        num = write(cfd, s_mod_hdr, strlen(s_mod_hdr));
+                                        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:269:9: warning: Value stored to 'retval' is never read [deadcode.DeadStores]
+        retval = connect(fd, (struct sockaddr*)&sin, sizeof(sin));
+        ^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:102:6: warning: Value stored to 'num' is never read [deadcode.DeadStores]
+                                        num = write(sfd, c_mod_hdr, strlen(c_mod_hdr));
+                                        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:123:6: warning: Value stored to 'num' is never read [deadcode.DeadStores]
+                                        num = write(cfd, s_mod_hdr, strlen(s_mod_hdr));
+                                        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:269:9: warning: Value stored to 'retval' is never read [deadcode.DeadStores]
+        retval = connect(fd, (struct sockaddr*)&sin, sizeof(sin));
+        ^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+scan-build: Analysis run complete.
+scan-build: 3 bugs found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-103103-13406-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103103-13416-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103103-13423-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103104-13430-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.h:10:1: error: unknown type name 'hashtable'
+hashtable *cfg_parse(char *);
+^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.h:13:22: error: unknown type name 'hashtable'
+int cfg_validate_all(hashtable *, int mode);
+                     ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.h:19:29: error: unknown type name 'hashtable'
+void build_cfg_bitmask_opts(hashtable *);
+                            ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.h:21:17: error: unknown type name 'FILE'
+int config_dump(FILE *);
+                ^
+4 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103104-13437-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.h:15:16: error: unknown type name 'FILE'
+int proxy_dump(FILE *);
+               ^
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103104-13444-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103104-13451-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103104-13458-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103105-13468-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1112:3: warning: Value stored to 'rval' is never read [deadcode.DeadStores]
+                rval = proxy_add(proxy_addr, proxy_port);
+                ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1116:3: warning: Value stored to 'rval' is never read [deadcode.DeadStores]
+                rval = proxy_mod(proxy_idx, proxy_addr, proxy_port);
+                ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1112:3: warning: Value stored to 'rval' is never read [deadcode.DeadStores]
+                rval = proxy_add(proxy_addr, proxy_port);
+                ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1116:3: warning: Value stored to 'rval' is never read [deadcode.DeadStores]
+                rval = proxy_mod(proxy_idx, proxy_addr, proxy_port);
+                ^      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+scan-build: Analysis run complete.
+scan-build: 2 bugs found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-103105-13478-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:34:4: error: use of undeclared identifier 'NULL'
+        { NULL           , NULL            }
+          ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:34:17: error: use of undeclared identifier 'NULL'
+        { NULL           , NULL            }
+                           ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:39:4: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL            }
+          ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:39:19: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL            }
+                            ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:47:4: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL                   }
+          ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:47:21: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL                   }
+                            ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:53:4: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL                  }     
+          ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h:53:14: error: use of undeclared identifier 'NULL'
+        { NULL            , NULL                  }     
+                            ^
+8 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103106-13488-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103106-13495-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:98:2: warning: Potential leak of memory pointed to by 'orig_hdr' [unix.Malloc]
+        strcat(mod_hdr, field);
+        ^~~~~~
+1 warning generated.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:98:2: warning: Potential leak of memory pointed to by 'orig_hdr' [unix.Malloc]
+        strcat(mod_hdr, field);
+        ^~~~~~
+1 warning generated.
+scan-build: Analysis run complete.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-103107-13505-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103108-13515-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103108-13522-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103108-13532-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103109-13540-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103109-13547-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103109-13557-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103109-13564-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:121:20: warning: Potential leak of memory pointed to by 'cur_proxy.addr' [unix.Malloc]
+                cur_proxy.port = atoi(proxy_port);
+                                 ^~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:366:7: warning: Use of memory after it is freed [unix.Malloc]
+                if (proxies.db[idx]->state == UNKNOWN) {
+                    ^~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:815:6: warning: Although the value stored to 'cur_threads' is used in the enclosing expression, the value is never actually read from 'cur_threads' [deadcode.DeadStores]
+        i = cur_threads = 0;
+            ^             ~
+3 warnings generated.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:121:20: warning: Potential leak of memory pointed to by 'cur_proxy.addr' [unix.Malloc]
+                cur_proxy.port = atoi(proxy_port);
+                                 ^~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:366:7: warning: Use of memory after it is freed [unix.Malloc]
+                if (proxies.db[idx]->state == UNKNOWN) {
+                    ^~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:815:6: warning: Although the value stored to 'cur_threads' is used in the enclosing expression, the value is never actually read from 'cur_threads' [deadcode.DeadStores]
+        i = cur_threads = 0;
+            ^             ~
+3 warnings generated.
+scan-build: Analysis run complete.
+scan-build: 3 bugs found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-103110-13571-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103114-13582-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:39:10: warning: Potential leak of memory pointed to by 'tmp' [unix.Malloc]
+                return NULL;
+                       ^~~~
+/usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h:89:24: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+                       ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:79:15: warning: Passed-by-value struct argument contains uninitialized data (e.g., field: 'data') [core.CallAndMessage]
+        if (!hash || hsearch_r(e, FIND, &ep, hash) < 1) {
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:139:6: warning: Branch condition evaluates to a garbage value [core.uninitialized.Branch]
+        if (ep) { 
+            ^~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:165:15: warning: Passed-by-value struct argument contains uninitialized data (e.g., field: 'data') [core.CallAndMessage]
+        if (!hash || hsearch_r(e, FIND, &ep, hash) < 1) {
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4 warnings generated.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:39:10: warning: Potential leak of memory pointed to by 'tmp' [unix.Malloc]
+                return NULL;
+                       ^~~~
+/usr/lib/llvm-14/lib/clang/14.0.0/include/stddef.h:89:24: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+                       ^
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:79:15: warning: Passed-by-value struct argument contains uninitialized data (e.g., field: 'data') [core.CallAndMessage]
+        if (!hash || hsearch_r(e, FIND, &ep, hash) < 1) {
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:139:6: warning: Branch condition evaluates to a garbage value [core.uninitialized.Branch]
+        if (ep) { 
+            ^~
+/home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c:165:15: warning: Passed-by-value struct argument contains uninitialized data (e.g., field: 'data') [core.CallAndMessage]
+        if (!hash || hsearch_r(e, FIND, &ep, hash) < 1) {
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4 warnings generated.
+scan-build: Analysis run complete.
+scan-build: 4 bugs found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-103115-13589-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103115-13599-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/krembo/krembo-0.1/krembo.c:6:10: fatal error: 'ntddk.h' file not found
+#include <ntddk.h>
+         ^~~~~~~~~
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103115-13606-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h:5:1: error: unknown type name 'opts'
+opts *opts_alloc_default(void);
+^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h:10:16: error: unknown type name 'opts'
+void opts_free(opts *);
+               ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h:12:24: error: unknown type name 'opts'
+int opts_has_direction(opts *);
+                       ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h:13:21: error: unknown type name 'opts'
+int opts_has_action(opts *);
+                    ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h:14:24: error: unknown type name 'opts'
+int opts_has_cmdparams(opts *);
+                       ^
+5 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103115-13613-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103115-13620-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103115-13627-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103116-13637-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103116-13647-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103116-13654-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:5:1: error: unknown type name 'process'
+process *process_attach(int);
+^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:6:1: error: unknown type name 'process'
+process *process_create(char *, char **, char **);
+^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:8:1: error: unknown type name 'process'
+process *process_getcur(void);
+^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:9:21: error: unknown type name 'process'
+void process_setcur(process *);
+                    ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:14:19: error: unknown type name 'process'
+int process_start(process *, opts *);
+                  ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:14:30: error: unknown type name 'opts'
+int process_start(process *, opts *);
+                             ^
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.h:15:22: error: unknown type name 'process'
+void process_destory(process *);
+                     ^
+7 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103116-13661-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103116-13668-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103117-13675-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103117-13682-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103117-13692-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103117-13702-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103118-13709-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103122-13719-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103122-13726-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.c:15:10: fatal error: 'linux/user.h' file not found
+#include <linux/user.h>
+         ^~~~~~~~~~~~~~
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103122-13736-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103122-13743-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103122-13753-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103122-13760-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process_ext.h:14:2: error: unknown type name 'pid_t'
+        pid_t pid;
+        ^
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103123-13767-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103123-13774-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/hydrogen/hydrogen-0.1/src/hydrogen.c:12:10: fatal error: 'linux/mm.h' file not found
+#include <linux/mm.h>
+         ^~~~~~~~~~~~
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103123-13781-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103123-13788-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103123-13798-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/shells.h:14:2: error: unknown type name 'shbuf'
+        shbuf *(*gizmo_preproc) (void *, void *);
+        ^
+1 error generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103124-13805-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103124-13812-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.h:5:41: error: unknown type name 'gizmo_shcode'
+int gizmo_elf_processor(char *, char *, gizmo_shcode *);
+                                        ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.h:6:1: error: unknown type name 'Elf32_Shdr'
+Elf32_Shdr *gizmo_elf_getsctbyname(gizmo_elf *, char *);
+^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.h:6:36: error: unknown type name 'gizmo_elf'
+Elf32_Shdr *gizmo_elf_getsctbyname(gizmo_elf *, char *);
+                                   ^
+3 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103124-13822-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103124-13829-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103126-13839-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103126-13849-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.h:5:19: error: unknown type name 'FILE'
+void *io_getchunk(FILE *, long, int);
+                  ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.h:6:17: error: unknown type name 'FILE'
+int io_chunkcpy(FILE *, FILE *, long, int, int);
+                ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.h:6:25: error: unknown type name 'FILE'
+int io_chunkcpy(FILE *, FILE *, long, int, int);
+                        ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.h:7:17: error: unknown type name 'FILE'
+int io_filesize(FILE *);
+                ^
+4 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103126-13856-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103127-13863-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103127-13870-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c:72:12: warning: Although the value stored to 'r_bytes' is used in the enclosing expression, the value is never actually read from 'r_bytes' [deadcode.DeadStores]
+        w_bytes = r_bytes = 0;
+                  ^         ~
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c:90:2: warning: Potential leak of memory pointed to by 'buf' [unix.Malloc]
+        close(fd);
+        ^~~~~
+2 warnings generated.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c:72:12: warning: Although the value stored to 'r_bytes' is used in the enclosing expression, the value is never actually read from 'r_bytes' [deadcode.DeadStores]
+        w_bytes = r_bytes = 0;
+                  ^         ~
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c:90:2: warning: Potential leak of memory pointed to by 'buf' [unix.Malloc]
+        close(fd);
+        ^~~~~
+2 warnings generated.
+scan-build: Analysis run complete.
+scan-build: 2 bugs found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-103127-13877-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103127-13887-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103127-13894-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103127-13901-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103128-13908-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103128-13918-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103128-13928-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103128-13935-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103129-13945-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103129-13952-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h:17:3: error: unknown type name 'FILE'
+                FILE *fp;
+                ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h:22:3: error: unknown type name 'Elf32_Ehdr'
+                Elf32_Ehdr *ehdr;
+                ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h:23:3: error: unknown type name 'Elf32_Phdr'
+                Elf32_Phdr *phdr;
+                ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h:24:3: error: unknown type name 'Elf32_Shdr'
+                Elf32_Shdr *shdr;
+                ^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h:35:2: error: unknown type name 'gizmo_shcode'
+        gizmo_shcode *shcode;
+        ^
+5 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103129-13962-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmo.c:57:5: warning: Potential leak of memory pointed to by 'gizmo_type' [unix.Malloc]
+                                about();
+                                ^~~~~
+1 warning generated.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmo.c:57:5: warning: Potential leak of memory pointed to by 'gizmo_type' [unix.Malloc]
+                                about();
+                                ^~~~~
+1 warning generated.
+scan-build: Analysis run complete.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-103129-13969-1' to examine bug reports.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/preprocs.h:14:1: error: unknown type name 'shbuf'
+shbuf *gizmo_preproc_simple(void *, void *);
+^
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/preprocs.h:25:1: error: unknown type name 'shbuf'
+shbuf *gizmo_preproc_crypttxt(void *, void *);
+^
+2 errors generated.
+scan-build: Analysis run complete.
+scan-build: Removing directory '/tmp/scan-build-2023-11-30-103130-13979-1' because it contains no reports.
+scan-build: No bugs found.
+scan-build: Using '/usr/lib/llvm-14/bin/clang' for static analysis
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c:139:7: warning: Access to field 'fp' results in a dereference of a null pointer (loaded from field 'raw') [core.NullDereference]
+                if (image->raw->fp) {
+                    ^~~~~~~~~~~~~~
+1 warning generated.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c:139:7: warning: Access to field 'fp' results in a dereference of a null pointer (loaded from field 'raw') [core.NullDereference]
+                if (image->raw->fp) {
+                    ^~~~~~~~~~~~~~
+1 warning generated.
+scan-build: Analysis run complete.
+scan-build: 1 bug found.
+scan-build: Run 'scan-view /tmp/scan-build-2023-11-30-103130-13986-1' to examine bug reports.

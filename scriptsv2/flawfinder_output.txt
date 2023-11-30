@@ -1,0 +1,1409 @@
+Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+
+FINAL RESULTS:
+
+
+ANALYSIS SUMMARY:
+
+No hits found.
+Lines analyzed = 0 in approximately 0.03 seconds (0 lines/second)
+Physical Source Lines of Code (SLOC) = 0
+Hits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0
+Hits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0
+
+Minimum risk level = 1
+
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
+Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/http.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/hash.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/conf_ext.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/daemon.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/conf.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/www_ext.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/daemon.c
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/ghostd.c
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/www.c
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/www_links.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/http.c
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/ghostd.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/conf.c
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/httpd_ext.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/http_ext.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/log.c
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/log.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/www.h
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/hash.c
+Examining /home/wallsocket/tty64/ghost/ghost-0.1/src/proxy_ext.h
+
+FINAL RESULTS:
+
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:98:  [4] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:121:  [4] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:56:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:61:  [4] (format) vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (CWE-134). Use
+  a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:81:  [4] (format) vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (CWE-134). Use
+  a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:87:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:90:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:92:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:94:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:96:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:98:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:100:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:101:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:102:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:103:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:104:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:105:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:107:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:156:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:158:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:211:  [4] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.h:8:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/log.c:75:  [4] (format) vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (CWE-134). Use
+  a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/log.c:111:  [4] (format) fprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:695:  [4] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:696:  [4] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:130:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:149:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:182:  [4] (format) vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (CWE-134). Use
+  a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:185:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:186:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:187:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:188:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:189:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:190:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:191:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:253:  [4] (format) vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (CWE-134). Use
+  a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:273:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:274:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:275:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:276:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:277:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:278:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:279:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:280:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:281:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:376:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:377:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:378:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:379:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:380:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:386:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:387:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:405:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:410:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:414:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:418:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:454:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:455:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:456:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:457:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:458:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:459:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:460:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:461:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:462:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:463:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:475:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:476:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:477:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:478:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:479:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:480:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:481:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:482:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:483:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:484:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:485:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:492:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:511:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:512:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:513:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:514:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:517:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:518:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:519:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:521:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:522:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:523:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:526:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:527:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:528:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:529:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:530:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:531:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:532:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:533:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:534:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:535:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:536:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:552:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:554:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:555:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:556:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:557:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:559:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:560:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:561:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:562:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:563:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:564:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:565:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:567:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:568:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:569:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:570:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:571:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:572:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:574:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:610:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:611:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:612:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:613:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:617:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:618:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:619:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:620:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:651:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:654:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:655:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:656:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:657:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:658:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:662:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:663:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:664:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:665:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:669:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:670:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:671:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:672:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:675:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:676:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:677:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:680:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:681:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:689:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:690:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:693:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:697:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:698:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:699:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:700:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:701:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:702:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:703:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:722:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:724:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:725:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:726:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:727:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:728:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:729:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:730:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:732:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:734:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:735:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:736:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:737:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:738:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:739:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:740:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:741:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:742:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:743:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:744:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:746:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1188:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1189:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1190:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1191:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1192:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1193:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1194:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1195:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1196:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1200:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1201:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1202:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1203:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1204:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1205:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1244:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1258:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1259:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1260:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1265:  [4] (format) wprintf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:263:  [3] (random) srand:
+  This function is not sufficiently random for security-related functions
+  such as key and nonce creation (CWE-327). Use a more secure technique for
+  acquiring random values.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.c:116:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.c:120:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/daemon.c:74:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/daemon.c:167:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:99:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:122:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:129:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:130:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:134:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/http.c:211:  [2] (buffer) memcpy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:58:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:77:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:184:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:192:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:197:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:202:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:206:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:207:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:210:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:212:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:215:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:216:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:217:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:218:  [2] (buffer) strcat:
+  Does not check for buffer overflows when concatenating to destination
+  [MS-banned] (CWE-120). Consider using strcat_s, strncat, strlcat, or
+  snprintf (warning: strncat is easily misused). Risk is low because the
+  source is a constant string.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:287:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/log.c:67:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/log.c:129:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:33:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:43:  [2] (buffer) memcpy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:195:  [2] (integer) atoi:
+  Unless checked, the resulting number can exceed the expected range
+  (CWE-190). If source untrusted, check both minimum and maximum, even if the
+  input had no minus sign (large numbers can roll over into negative number;
+  consider saving to an unsigned value if that is intended).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:262:  [2] (buffer) bcopy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:53:  [2] (integer) atoi:
+  Unless checked, the resulting number can exceed the expected range
+  (CWE-190). If source untrusted, check both minimum and maximum, even if the
+  input had no minus sign (large numbers can roll over into negative number;
+  consider saving to an unsigned value if that is intended).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:54:  [2] (integer) atoi:
+  Unless checked, the resulting number can exceed the expected range
+  (CWE-190). If source untrusted, check both minimum and maximum, even if the
+  input had no minus sign (large numbers can roll over into negative number;
+  consider saving to an unsigned value if that is intended).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:67:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:77:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:121:  [2] (integer) atoi:
+  Unless checked, the resulting number can exceed the expected range
+  (CWE-190). If source untrusted, check both minimum and maximum, even if the
+  input had no minus sign (large numbers can roll over into negative number;
+  consider saving to an unsigned value if that is intended).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:133:  [2] (buffer) memcpy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:306:  [2] (buffer) memcpy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:338:  [2] (buffer) memcpy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:647:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:810:  [2] (integer) atoi:
+  Unless checked, the resulting number can exceed the expected range
+  (CWE-190). If source untrusted, check both minimum and maximum, even if the
+  input had no minus sign (large numbers can roll over into negative number;
+  consider saving to an unsigned value if that is intended).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:112:  [2] (integer) atoi:
+  Unless checked, the resulting number can exceed the expected range
+  (CWE-190). If source untrusted, check both minimum and maximum, even if the
+  input had no minus sign (large numbers can roll over into negative number;
+  consider saving to an unsigned value if that is intended).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:179:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:250:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:322:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:324:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1296:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:1302:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.c:154:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.c:159:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/conf.c:261:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:64:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:84:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:93:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:109:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:154:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:157:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:160:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:161:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:171:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:220:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:238:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:241:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:293:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:297:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:309:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/httpd.c:327:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/log.c:55:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:76:  [1] (buffer) read:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:87:  [1] (buffer) read:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:102:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:123:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/lowlevel.c:295:  [1] (buffer) read:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:101:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:105:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:670:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:687:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/proxy.c:687:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:46:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:52:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:88:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:94:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:146:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:154:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:165:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:337:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:647:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/ghost/ghost-0.1/src/www.c:974:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+
+ANALYSIS SUMMARY:
+
+Hits = 286
+Lines analyzed = 4617 in approximately 0.07 seconds (67886 lines/second)
+Physical Source Lines of Code (SLOC) = 2677
+Hits@level = [0]  18 [1]  40 [2]  48 [3]   1 [4] 197 [5]   0
+Hits@level+ = [0+] 304 [1+] 286 [2+] 246 [3+] 198 [4+] 197 [5+]   0
+Hits/KSLOC@level+ = [0+] 113.56 [1+] 106.836 [2+] 91.8939 [3+] 73.9634 [4+] 73.5898 [5+]   0
+Minimum risk level = 1
+
+Not every hit is necessarily a security vulnerability.
+You can inhibit a report by adding a comment in this form:
+// flawfinder: ignore
+Make *sure* it's a false positive!
+You can use the option --neverignore to show these.
+
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
+Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+Examining /home/wallsocket/tty64/krembo/krembo-0.1/krembo.c
+
+FINAL RESULTS:
+
+
+ANALYSIS SUMMARY:
+
+No hits found.
+Lines analyzed = 238 in approximately 0.03 seconds (7137 lines/second)
+Physical Source Lines of Code (SLOC) = 105
+Hits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0
+Hits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0
+Hits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0
+Minimum risk level = 1
+
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
+Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/opts.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/utilities.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/io.c
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/gfx.c
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/io.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/gfx.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/process.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/consts.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/procfs.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/hexdump.c
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/opts.c
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/io_ext.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/sinister.c
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/sinister.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/utilities.c
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/process.c
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/procfs_read.c
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/hexdump.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/hex_ext.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/process_ext.h
+Examining /home/wallsocket/tty64/sinister/sinister-0.1/src/opts_ext.h
+
+FINAL RESULTS:
+
+/home/wallsocket/tty64/sinister/sinister-0.1/src/procfs_read.c:21:  [5] (race) readlink:
+  This accepts filename arguments; if an attacker can move those files or
+  change the link content, a race condition results. Also, it does not
+  terminate with ASCII NUL. (CWE-362, CWE-20). Reconsider approach.
+/home/wallsocket/tty64/sinister/sinister-0.1/src/gfx.c:38:  [4] (format) vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (CWE-134). Use
+  a constant for the format specification.
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.c:195:  [4] (race) access:
+  This usually indicates a security flaw. If an attacker can change anything
+  along the path between the call to access() and the file's actual use
+  (e.g., by moving files), the attacker can exploit the race condition
+  (CWE-362/CWE-367!). Set up the correct permissions (e.g., using setuid())
+  and try to open the file directly.
+/home/wallsocket/tty64/sinister/sinister-0.1/src/sinister.c:56:  [3] (buffer) getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (CWE-120, CWE-20). Check implementation on installation, or limit the size
+  of all string inputs.
+/home/wallsocket/tty64/sinister/sinister-0.1/src/gfx.c:35:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/sinister/sinister-0.1/src/io.c:26:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+/home/wallsocket/tty64/sinister/sinister-0.1/src/procfs_read.c:17:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/sinister/sinister-0.1/src/sinister.c:109:  [2] (integer) atoi:
+  Unless checked, the resulting number can exceed the expected range
+  (CWE-190). If source untrusted, check both minimum and maximum, even if the
+  input had no minus sign (large numbers can roll over into negative number;
+  consider saving to an unsigned value if that is intended).
+/home/wallsocket/tty64/sinister/sinister-0.1/src/sinister.c:246:  [2] (integer) atoi:
+  Unless checked, the resulting number can exceed the expected range
+  (CWE-190). If source untrusted, check both minimum and maximum, even if the
+  input had no minus sign (large numbers can roll over into negative number;
+  consider saving to an unsigned value if that is intended).
+/home/wallsocket/tty64/sinister/sinister-0.1/src/sinister.c:248:  [2] (integer) atoi:
+  Unless checked, the resulting number can exceed the expected range
+  (CWE-190). If source untrusted, check both minimum and maximum, even if the
+  input had no minus sign (large numbers can roll over into negative number;
+  consider saving to an unsigned value if that is intended).
+/home/wallsocket/tty64/sinister/sinister-0.1/src/gfx.c:41:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/sinister/sinister-0.1/src/gfx.c:43:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.c:67:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.c:424:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.c:437:  [1] (buffer) strncpy:
+  Easily used incorrectly; doesn't always \0-terminate or check for invalid
+  pointers [MS-banned] (CWE-120).
+/home/wallsocket/tty64/sinister/sinister-0.1/src/process.c:437:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+
+ANALYSIS SUMMARY:
+
+Hits = 16
+Lines analyzed = 1607 in approximately 0.03 seconds (50431 lines/second)
+Physical Source Lines of Code (SLOC) = 908
+Hits@level = [0]  52 [1]   6 [2]   6 [3]   1 [4]   2 [5]   1
+Hits@level+ = [0+]  68 [1+]  16 [2+]  10 [3+]   4 [4+]   3 [5+]   1
+Hits/KSLOC@level+ = [0+] 74.8899 [1+] 17.6211 [2+] 11.0132 [3+] 4.40529 [4+] 3.30396 [5+] 1.10132
+Minimum risk level = 1
+
+Not every hit is necessarily a security vulnerability.
+You can inhibit a report by adding a comment in this form:
+// flawfinder: ignore
+Make *sure* it's a false positive!
+You can use the option --neverignore to show these.
+
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
+Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+Examining /home/wallsocket/tty64/hydrogen/hydrogen-0.1/src/hydrogen.c
+
+FINAL RESULTS:
+
+/home/wallsocket/tty64/hydrogen/hydrogen-0.1/src/hydrogen.c:162:  [1] (buffer) read:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+
+ANALYSIS SUMMARY:
+
+Hits = 1
+Lines analyzed = 212 in approximately 0.01 seconds (18388 lines/second)
+Physical Source Lines of Code (SLOC) = 163
+Hits@level = [0]   0 [1]   1 [2]   0 [3]   0 [4]   0 [5]   0
+Hits@level+ = [0+]   1 [1+]   1 [2+]   0 [3+]   0 [4+]   0 [5+]   0
+Hits/KSLOC@level+ = [0+] 6.13497 [1+] 6.13497 [2+]   0 [3+]   0 [4+]   0 [5+]   0
+Minimum risk level = 1
+
+Not every hit is necessarily a security vulnerability.
+You can inhibit a report by adding a comment in this form:
+// flawfinder: ignore
+Make *sure* it's a false positive!
+You can use the option --neverignore to show these.
+
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
+Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+
+FINAL RESULTS:
+
+
+ANALYSIS SUMMARY:
+
+No hits found.
+Lines analyzed = 0 in approximately 0.00 seconds (0 lines/second)
+Physical Source Lines of Code (SLOC) = 0
+Hits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0
+Hits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0
+
+Dot directories skipped = 1 (--followdotdir overrides)
+Minimum risk level = 1
+
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
+Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+
+FINAL RESULTS:
+
+
+ANALYSIS SUMMARY:
+
+No hits found.
+Lines analyzed = 0 in approximately 0.01 seconds (0 lines/second)
+Physical Source Lines of Code (SLOC) = 0
+Hits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0
+Hits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0
+
+Minimum risk level = 1
+
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
+Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+
+FINAL RESULTS:
+
+
+ANALYSIS SUMMARY:
+
+No hits found.
+Lines analyzed = 0 in approximately 0.01 seconds (0 lines/second)
+Physical Source Lines of Code (SLOC) = 0
+Hits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0
+Hits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0
+
+Minimum risk level = 1
+
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
+Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/preprocs.c
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/x86.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shells.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.c
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.c
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gfx.c
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmo.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/io.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/crypt.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gfx.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shbuf.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmos.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shbuf.c
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/asm.c
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/asm.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/crypt.c
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/shells.c
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf_ext.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmo.c
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/preprocs.h
+Examining /home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c
+
+FINAL RESULTS:
+
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/gfx.c:38:  [4] (format) vsnprintf:
+  If format strings can be influenced by an attacker, they can be exploited,
+  and note that sprintf variations do not always \0-terminate (CWE-134). Use
+  a constant for the format specification.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.c:21:  [4] (misc) getpass:
+  This function is obsolete and not portable. It was in SUSv2 but removed by
+  POSIX.2. What it does exactly varies considerably between systems,
+  particularly in where its prompt is displayed and where it gets its data
+  (e.g., /dev/tty, stdin, stderr, etc.). In addition, some implementations
+  overflow buffers. (CWE-676, CWE-120, CWE-20). Make the specific calls to do
+  exactly what you want. If you continue to use it, or write your own, be
+  sure to zero the password as soon as possible to avoid leaving the
+  cleartext password visible in the process' address space.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/asm.c:20:  [3] (random) srand:
+  This function is not sufficiently random for security-related functions
+  such as key and nonce creation (CWE-327). Use a more secure technique for
+  acquiring random values.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/gizmo.c:47:  [3] (buffer) getopt:
+  Some older implementations do not protect against internal buffer overflows
+  (CWE-120, CWE-20). Check implementation on installation, or limit the size
+  of all string inputs.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c:192:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c:353:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c:451:  [2] (buffer) memcpy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c:461:  [2] (buffer) memcpy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c:472:  [2] (buffer) memcpy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c:490:  [2] (buffer) memcpy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/elf.c:535:  [2] (misc) fopen:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/gfx.c:35:  [2] (buffer) char:
+  Statically-sized arrays can be improperly restricted, leading to potential
+  overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use
+  functions that limit length, or ensure that the size is larger than the
+  maximum possible length.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.c:104:  [2] (integer) atoi:
+  Unless checked, the resulting number can exceed the expected range
+  (CWE-190). If source untrusted, check both minimum and maximum, even if the
+  input had no minus sign (large numbers can roll over into negative number;
+  consider saving to an unsigned value if that is intended).
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c:62:  [2] (misc) open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/shbuf.c:75:  [2] (buffer) memcpy:
+  Does not check for buffer overflows when copying to destination (CWE-120).
+  Make sure destination can always hold the source data.
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/crypt.c:25:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/gfx.c:41:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/gfx.c:43:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.c:28:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.c:28:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.c:40:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/misc.c:96:  [1] (buffer) strlen:
+  Does not handle strings that are not \0-terminated; if given one it may
+  perform an over-read (it could cause a crash if unprotected) (CWE-126).
+/home/wallsocket/tty64/gizmo/gizmo-0.1/src/postprocs.c:76:  [1] (buffer) read:
+  Check buffer boundaries if used in a loop including recursive loops
+  (CWE-120, CWE-20).
+
+ANALYSIS SUMMARY:
+
+Hits = 23
+Lines analyzed = 1768 in approximately 0.04 seconds (44410 lines/second)
+Physical Source Lines of Code (SLOC) = 1070
+Hits@level = [0]  61 [1]   8 [2]  11 [3]   2 [4]   2 [5]   0
+Hits@level+ = [0+]  84 [1+]  23 [2+]  15 [3+]   4 [4+]   2 [5+]   0
+Hits/KSLOC@level+ = [0+] 78.5047 [1+] 21.4953 [2+] 14.0187 [3+] 3.73832 [4+] 1.86916 [5+]   0
+Minimum risk level = 1
+
+Not every hit is necessarily a security vulnerability.
+You can inhibit a report by adding a comment in this form:
+// flawfinder: ignore
+Make *sure* it's a false positive!
+You can use the option --neverignore to show these.
+
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
+Running flawfinder on: /home/wallsocket/tty64/shcfuscator
+
+--------------------------------------------------
+Running flawfinder on: /home/wallsocket/tty64/ghost
+
+--------------------------------------------------
+Running flawfinder on: /home/wallsocket/tty64/krembo
+
+--------------------------------------------------
+Running flawfinder on: /home/wallsocket/tty64/sinister
+
+--------------------------------------------------
+Running flawfinder on: /home/wallsocket/tty64/hydrogen
+
+--------------------------------------------------
+Running flawfinder on: /home/wallsocket/tty64/.git
+
+--------------------------------------------------
+Running flawfinder on: /home/wallsocket/tty64/runlib
+
+--------------------------------------------------
+Running flawfinder on: /home/wallsocket/tty64/scripts
+
+--------------------------------------------------
+Running flawfinder on: /home/wallsocket/tty64/gizmo
+
+--------------------------------------------------
